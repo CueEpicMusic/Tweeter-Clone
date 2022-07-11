@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding-top: 4em;
+  padding-bottom: 1em;
+  background-color: #d18400;
+  background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+  color: #FFFFFF;
+  font-size: 2em;
+}
+
+.header-profile {
+  max-width: 220px;
+}
+
+.header-profile img {
+  width: 100%;
+}

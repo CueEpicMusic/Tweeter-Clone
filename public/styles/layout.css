@@ -17,7 +17,8 @@ html {
 body {
   color: #545149;
   background-color: #f4f1ec;
-  font-size: 24px;
+  /* height: 100vh; */
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 /*
