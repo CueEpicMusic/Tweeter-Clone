@@ -35,6 +35,10 @@
   align-items: center;
 }
 
+.main-tweets .tweeter-name p {
+  padding: 0 0.25em;
+}
+
 .main-tweets .tweeter-handle {
   opacity: 0.5;
 }

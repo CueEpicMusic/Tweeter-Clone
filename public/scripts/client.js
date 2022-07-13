@@ -43,7 +43,7 @@ const createTweetElement = function (data) {
         <header>
           <div class="tweeter-name">
             <img src="${data.user.avatars}">
-            ${data.user.name}
+            <p>${data.user.name}</p>
           </div>
           <div class="tweeter-handle">
             <strong>${data.user.handle}</strong>

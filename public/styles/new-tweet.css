@@ -2,6 +2,10 @@
   width: 100%;
 }
 
+.new-tweet h2 {
+  margin-block-end: 0px;
+}
+
 .new-tweet div {
   display: flex;
   justify-content: space-between;
@@ -11,9 +15,13 @@
 .new-tweet button {
   border: none;
   font-family: 'Bungee', cursive;
+  font-size: 1.25em;
   color: #FFFFFF;
   background-color: #4056A1;
-  font-size: 1.25em;
+}
+
+.new-tweet button:hover {
+  background-color: orangered;
 }
 
 .counter {
@@ -23,9 +31,10 @@
 
 #tweet-text {
   border: none;
-  width: 100%;
-  background-color: #f4f1ec;
   border-bottom: 2px solid #1890ff;
+  width: 100%;
+  height: 1.5em;
+  background-color: #f4f1ec;
 }
 
 .counter-red {
