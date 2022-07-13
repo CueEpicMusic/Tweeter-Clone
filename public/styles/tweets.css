@@ -30,6 +30,11 @@
   padding: 0.5em 0;
 }
 
+.main-tweets .tweeter-name {
+  display: flex;
+  align-items: center;
+}
+
 .main-tweets .tweeter-handle {
   opacity: 0.5;
 }
