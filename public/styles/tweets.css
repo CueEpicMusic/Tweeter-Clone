@@ -1,18 +1,18 @@
 .main-tweets article {
   width: 100%;
   margin: 1em;
-  padding: 0 1em;
+  padding: 0 2em;
   border: solid;
 }
 
 .main-tweets article:hover {
-  box-shadow: 0.5em 0.5em lightblue; 
+  box-shadow: 0.5em 0.5em #D9B48FFF; 
 }
 
 .main-tweets footer ul{
   display: flex;
   list-style: none;
-  color: #4056A1;
+  color: #85B3D1FF;
 }
 
 .main-tweets footer ul li{
@@ -51,6 +51,10 @@
 
 .main-tweets .tweeter-tweet {
   border-bottom: solid;
+}
+
+.main-tweets .tweeter-tweet strong{
+  font-size: 1.25em;
 }
 
 .main-tweets .tweeter-tweet span{

@@ -9,34 +9,38 @@
 // Test / driver code (temporary). Eventually will get this from the server.
 const data = [
   {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
+    user: {
+      name: "Newton",
+      avatars: "https://i.imgur.com/73hZDYK.png",
+      handle: "@SirIsaac",
     },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
+    content: {
+      text: "If I have seen further it is by standing on the shoulders of giants",
     },
-    "created_at": 1461116232227
+    created_at: 1461116232227,
   },
   {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
+    user: {
+      name: "Descartes",
+      avatars: "https://i.imgur.com/nlhLi3I.png",
+      handle: "@rd",
     },
-    "created_at": 1461113959088
-  }
-]
+    content: {
+      text: "Je pense , donc je suis",
+    },
+    created_at: 1461113959088,
+  },
+];
 
-const renderTweets = function(tweets) {
-  for (const tweet of tweets) {
-    createTweetElement(tweet)
-  }
+const loadtweets = function () {
+  $
 }
+
+const renderTweets = function (tweets) {
+  for (const tweet of tweets) {
+    createTweetElement(tweet);
+  }
+};
 
 const createTweetElement = function (data) {
   let $tweet = `<article>
@@ -50,7 +54,7 @@ const createTweetElement = function (data) {
           </div>
         </header>
         <div class="tweeter-tweet">
-          <span>${data.content.text}</span>
+          <strong>${data.content.text}</strong>
         </div>
         <footer>
           <span>${data.created_at}</span>
@@ -70,6 +74,15 @@ const createTweetElement = function (data) {
   return $(".main-tweets").append($tweet);
 };
 
-renderTweets(data);
+$(document).ready(function () {
+  renderTweets(data);
 
-
+  $("#tweet-form").on("submit", function (event) {
+    event.preventDefault();
+    const tweet = $(this).serialize();
+    console.log(tweet)
+    $.post("/tweets", tweet).then((data) => {
+      console.log(data);
+    });
+  });
+});
