@@ -56,7 +56,11 @@
       <section class="new-tweet">
         <h2>What are you humming about?</h2>
         <form id="tweet-form" method="post" action="/tweets">
-          <p class="errorMessage"></p>
+          <p class="error-section">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <span class="error-message"></span>
+            <i class="fa-solid fa-triangle-exclamation"></i>
+          </p>
           <textarea name="text" id="tweet-text"></textarea>
           <div>
             <button type="submit">Tweet</button>

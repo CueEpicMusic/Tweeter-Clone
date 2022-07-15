@@ -17,6 +17,12 @@ const renderTweets = function (tweets) {
   }
 };
 
+const safeHTML = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 const createTweetElement = function (tweet) {
   let $tweet = `<article>
         <header>
@@ -29,7 +35,7 @@ const createTweetElement = function (tweet) {
           </div>
         </header>
         <div class="tweeter-tweet">
-          <strong>${tweet.content.text}</strong>
+          <strong>${safeHTML(tweet.content.text)}</strong>
         </div>
         <footer>
           <span>${timeago.format(tweet.created_at)}</span>
@@ -49,16 +55,13 @@ const createTweetElement = function (tweet) {
   return $(".main-tweets .tweet-container").prepend($tweet);
 };
 const displayError = (error) => {
-  $("#tweet-form").find(".errorMessage").text(error).slideDown("slow");
-  setTimeout(() => {
-    console.log("abc");
-    $("#tweet-form").find("p").slideUp("slow");
-  }, 1500);
+  $("#tweet-form").find(".error-section").slideDown("slow");
+  $("#tweet-form").find(".error-message").text(error);
 };
 
 $(document).ready(function () {
   loadtweets();
-  $(".errorMessage").hide();
+  $(".error-section").hide();
   $("#tweet-form").on("submit", function (event) {
     event.preventDefault();
     if ($(this).find("textarea").val().length < 1) {
@@ -66,10 +69,11 @@ $(document).ready(function () {
       return displayError(errorMessage);
     }
     if ($(this).find("textarea").val().length > 140) {
-      const errorMessage = "Cannot send tweet more than 140 characters!";
+      const errorMessage = "Cannot send tweet with more than 140 characters!";
       return displayError(errorMessage);
     }
     const tweet = $(this).serialize();
+    $(".error-section").slideUp("slow");
     $.post("/tweets", tweet).then((data) => {
       $(this).find("textarea").val("");
       loadtweets();

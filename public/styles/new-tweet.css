@@ -41,11 +41,15 @@
   color: orangered;
 }
 
-.errorMessage {
+.error-section {
   display: flex;
   justify-content: center;
   border: solid;
   padding: 1em;
   color: red;
   text-transform: uppercase;
+}
+
+.error-section i {
+  padding: 0 1em;
 }
