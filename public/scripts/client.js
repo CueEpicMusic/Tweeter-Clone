@@ -6,9 +6,10 @@
 
 const loadtweets = function () {
   $.get("/tweets").then((res) => {
-    renderTweets(res)
-  })
-}
+    $(".main-tweets .tweet-container").html("");
+    renderTweets(res);
+  });
+};
 
 const renderTweets = function (tweets) {
   for (const tweet of tweets) {
@@ -45,17 +46,33 @@ const createTweetElement = function (tweet) {
           </ul>
         </footer>
       </article>`;
-  return $(".main-tweets").append($tweet);
+  return $(".main-tweets .tweet-container").prepend($tweet);
+};
+const displayError = (error) => {
+  $("#tweet-form").find(".errorMessage").text(error).slideDown("slow");
+  setTimeout(() => {
+    console.log("abc");
+    $("#tweet-form").find("p").slideUp("slow");
+  }, 1500);
 };
 
 $(document).ready(function () {
   loadtweets();
-
+  $(".errorMessage").hide();
   $("#tweet-form").on("submit", function (event) {
     event.preventDefault();
+    if ($(this).find("textarea").val().length < 1) {
+      const errorMessage = "Cannot send empty tweet!";
+      return displayError(errorMessage);
+    }
+    if ($(this).find("textarea").val().length > 140) {
+      const errorMessage = "Cannot send tweet more than 140 characters!";
+      return displayError(errorMessage);
+    }
     const tweet = $(this).serialize();
     $.post("/tweets", tweet).then((data) => {
-      console.log(data)
+      $(this).find("textarea").val("");
+      loadtweets();
     });
   });
 });

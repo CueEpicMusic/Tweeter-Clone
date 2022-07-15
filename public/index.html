@@ -56,6 +56,7 @@
       <section class="new-tweet">
         <h2>What are you humming about?</h2>
         <form id="tweet-form" method="post" action="/tweets">
+          <p class="errorMessage"></p>
           <textarea name="text" id="tweet-text"></textarea>
           <div>
             <button type="submit">Tweet</button>
@@ -63,6 +64,7 @@
           </div>
         </form>
       </section>
+      <div class="tweet-container"></div>
     </main>
   </body>
   <script type="text/javascript" src="/scripts/client.js"></script>

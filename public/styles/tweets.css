@@ -1,12 +1,16 @@
 .main-tweets article {
   width: 100%;
-  margin: 1em;
+  margin: 1em 0;
   padding: 0 2em;
   border: solid;
 }
 
 .main-tweets article:hover {
   box-shadow: 0.5em 0.5em #D9B48FFF; 
+}
+
+.main-tweets .tweet-container {
+  width: 100%;
 }
 
 .main-tweets footer ul{
