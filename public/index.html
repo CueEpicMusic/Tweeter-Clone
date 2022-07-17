@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="/styles/main.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/footer.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -35,8 +36,10 @@
           <li>
             <strong>Write</strong> a new tweet
           </li>
-          <li>
-            <i class="fa-solid fa-angles-down"></i>
+          <li class="compose">
+            <button class="compose-button">
+              <i class="fa-solid fa-angles-down"></i>
+            </button>
           </li>
         <ul>
     </nav>
@@ -70,7 +73,13 @@
       </section>
       <div class="tweet-container"></div>
     </main>
+    <footer>
+      <button class="scrollUp">
+        <i class="fa-solid fa-angles-up"></i>
+      </button>
+    </footer>
   </body>
   <script type="text/javascript" src="/scripts/client.js"></script>
+  <script type="text/javascript" src="/scripts/compose.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 </html>

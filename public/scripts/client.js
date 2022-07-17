@@ -4,6 +4,17 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+//Animates the write a tweet arrow button
+$(".navbar-menu .compose").click(function () {
+  let section = $(".new-tweet");
+  if (section.is(":visible")) {
+    section.slideUp("fast");
+  } else {
+    section.slideDown("fast");
+    section.find("#tweet-text").focus();
+  }
+});
+
 const loadtweets = function () {
   $.get("/tweets").then((res) => {
     $(".main-tweets .tweet-container").html("");
@@ -17,6 +28,7 @@ const renderTweets = function (tweets) {
   }
 };
 
+//Escape function
 const safeHTML = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
@@ -54,6 +66,8 @@ const createTweetElement = function (tweet) {
       </article>`;
   return $(".main-tweets .tweet-container").prepend($tweet);
 };
+
+//Shows appropriate error message section when triggered
 const displayError = (error) => {
   $("#tweet-form").find(".error-section").slideDown("slow");
   $("#tweet-form").find(".error-message").text(error);
@@ -62,6 +76,8 @@ const displayError = (error) => {
 $(document).ready(function () {
   loadtweets();
   $(".error-section").hide();
+  $(".new-tweet").hide();
+  $(".scrollUp").hide();
   $("#tweet-form").on("submit", function (event) {
     event.preventDefault();
     if ($(this).find("textarea").val().length < 1) {
@@ -76,6 +92,7 @@ $(document).ready(function () {
     $(".error-section").slideUp("slow");
     $.post("/tweets", tweet).then((data) => {
       $(this).find("textarea").val("");
+      $(".main-tweets output").val(140);
       loadtweets();
     });
   });

@@ -28,6 +28,27 @@
   list-style: none;
 }
 
+.navbar-menu .compose-button {
+  border: none;
+  background-color: #2460A7FF;
+  cursor: pointer;
+}
+
 .navbar-menu li i {
   color: orangered;
+}
+
+.navbar-menu .compose-button:hover {
+  -webkit-animation: action 0.5s infinite  alternate;
+  animation: action 0.5s infinite  alternate;
+}
+
+@-webkit-keyframes action {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(10px); }
+}
+
+@keyframes action {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(10px); }
 }
