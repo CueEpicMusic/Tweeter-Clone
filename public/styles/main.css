@@ -1,3 +1,4 @@
+/* New tweet and existing tweet container */
 .main-tweets {
   display: flex;
   flex-direction: column;

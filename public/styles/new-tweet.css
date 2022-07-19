@@ -1,3 +1,4 @@
+/* Write a new tweet container */
 .new-tweet{
   width: 100%;
 }
@@ -6,6 +7,7 @@
   margin-block-end: 0px;
 }
 
+/* Tweet button and character counter */
 .new-tweet div {
   display: flex;
   justify-content: space-between;
@@ -30,6 +32,7 @@
   font-size: 1.25em;
 }
 
+/* Tweet textarea */
 #tweet-text {
   border: none;
   border-bottom: 2px solid #2460A7FF;

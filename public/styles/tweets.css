@@ -1,3 +1,9 @@
+/* Container for existing tweet container */
+.main-tweets .tweet-container {
+  width: 100%;
+}
+
+/* Existing tweet container */
 .main-tweets article {
   width: 100%;
   margin: 1em 0;
@@ -9,24 +15,7 @@
   box-shadow: 0.5em 0.5em #D9B48FFF; 
 }
 
-.main-tweets .tweet-container {
-  width: 100%;
-}
-
-.main-tweets footer ul{
-  display: flex;
-  list-style: none;
-  color: #85B3D1FF;
-}
-
-.main-tweets footer ul li{
-  padding: 0 0.25em;
-}
-
-.main-tweets footer ul li:hover{
-  color: orangered;
-}
-
+/* Avatar, name and handle */
 .main-tweets header {
   display: flex;
   justify-content: space-between;
@@ -34,33 +23,51 @@
   padding: 0.5em 0;
 }
 
+/* Avatar and name */
 .main-tweets .tweeter-name {
   display: flex;
   align-items: center;
 }
 
+/* Name */
 .main-tweets .tweeter-name p {
   padding: 0 0.25em;
 }
 
+/* Handle */
 .main-tweets .tweeter-handle {
   opacity: 0.5;
 }
 
+/* User's tweet container*/
+.main-tweets .tweeter-tweet {
+  border-bottom: solid;
+}
+
+/* User's tweet */
+.main-tweets .tweeter-tweet strong{
+  font-size: 1.25em;
+}
+
+/* Tweet creation date and icons */
 .main-tweets footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.main-tweets .tweeter-tweet {
-  border-bottom: solid;
+/* Icons */
+.main-tweets footer ul{
+  display: flex;
+  list-style: none;
+  color: #85B3D1FF;
 }
 
-.main-tweets .tweeter-tweet strong{
-  font-size: 1.25em;
+/* Icons */
+.main-tweets footer ul li{
+  padding: 0 0.25em;
 }
 
-.main-tweets .tweeter-tweet span{
-  font-size: 1.25em;
+.main-tweets footer ul li:hover{
+  color: orangered;
 }

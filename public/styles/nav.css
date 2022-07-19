@@ -1,3 +1,4 @@
+/* Top nav bar */
 .navbar-top {
   display: flex;
   justify-content: space-between;
@@ -13,12 +14,14 @@
   top: 0;
  }
 
+/* Tweeter logo */
 .navbar-logo {
   font-family: 'Bungee', cursive;
   font-size: 3em;
   color: #FFFFFF;
 }
 
+/* Write a tweet and button */
 .navbar-menu {
   display: flex;
   flex-direction: column;
@@ -28,19 +31,21 @@
   list-style: none;
 }
 
+/* Button style */
 .navbar-menu .compose-button {
   border: none;
   background-color: #2460A7FF;
   cursor: pointer;
 }
 
-.navbar-menu li i {
-  color: orangered;
-}
-
 .navbar-menu .compose-button:hover {
   -webkit-animation: action 0.5s infinite  alternate;
   animation: action 0.5s infinite  alternate;
+}
+
+/* Button color */
+.navbar-menu li i {
+  color: orangered;
 }
 
 @-webkit-keyframes action {
