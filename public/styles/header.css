@@ -20,3 +20,20 @@
 .header-profile img {
   width: 100%;
 }
+
+@media only screen and (min-width: 1024px) {
+  .large-screen {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .header {
+    width: 8em;
+    height: 8em;
+    margin: 3.25em 1em;
+    padding-top: 1em;
+    border-style: solid;
+    border-color: black;
+    box-shadow: 0.5em 0.5em #D9B48FFF; 
+  }
+}
