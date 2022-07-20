@@ -1,20 +1,24 @@
+@import '_variables';
+
 /* Top nav bar */
 .navbar-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   padding: 0 1.5em;
   height: 120px;
   width: 100%;
-  background-color: #2460a7;
+  background-color: $primary;
   color: #FFFFFF;
+  
   position: fixed;
   top: 0;
-}
+ }
 
 /* Tweeter logo */
 .navbar-logo {
-  font-family: "Bungee", cursive;
+  font-family: $logo;
   font-size: 3em;
   color: #FFFFFF;
 }
@@ -32,33 +36,27 @@
 /* Button style */
 .navbar-menu .compose-button {
   border: none;
-  background-color: #2460a7;
+  background-color: $primary;
   cursor: pointer;
 }
 
 .navbar-menu .compose-button:hover {
-  -webkit-animation: action 0.5s infinite alternate;
-  animation: action 0.5s infinite alternate;
+  -webkit-animation: action 0.5s infinite  alternate;
+  animation: action 0.5s infinite  alternate;
 }
 
 @-webkit-keyframes action {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(10px);
-  }
+  0% { transform: translateY(0); }
+  100% { transform: translateY(10px); }
 }
+
 @keyframes action {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(10px);
-  }
+  0% { transform: translateY(0); }
+  100% { transform: translateY(10px); }
 }
 
 /* Button color */
 .navbar-menu li i {
   color: orangered;
 }
+

@@ -1,11 +1,14 @@
+@import '_variables';
+
 /* Profile picture and name */
 .header {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   padding-top: 3em;
   padding-bottom: 1em;
-  background-color: #b3c7d6;
+  background-color: $secondary;
   background-image: url("https://www.transparenttextures.com/patterns/shattered-dark.png");
   color: #FFFFFF;
   font-size: 3em;
@@ -25,6 +28,7 @@
     display: flex;
     justify-content: space-around;
   }
+
   .header {
     width: 8em;
     height: 8em;
@@ -32,6 +36,6 @@
     padding-top: 1em;
     border-style: solid;
     border-color: black;
-    box-shadow: 0.5em 0.5em #d9b48f;
+    box-shadow: 0.5em 0.5em $fourth; 
   }
 }

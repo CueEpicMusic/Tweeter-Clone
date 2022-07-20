@@ -1,3 +1,5 @@
+@import '_variables';
+
 /* Container for existing tweet container */
 .main-tweets .tweet-container {
   width: 100%;
@@ -12,7 +14,7 @@
 }
 
 .main-tweets article:hover {
-  box-shadow: 0.5em 0.5em #d9b48f;
+  box-shadow: 0.5em 0.5em $fourth;
 }
 
 /* Avatar, name and handle */
@@ -45,7 +47,7 @@
 }
 
 /* User's tweet */
-.main-tweets .tweeter-tweet strong {
+.main-tweets .tweeter-tweet strong{
   font-size: 1.25em;
 }
 
@@ -57,17 +59,17 @@
 }
 
 /* Icons */
-.main-tweets footer ul {
+.main-tweets footer ul{
   display: flex;
   list-style: none;
-  color: #85b3d1;
+  color: $third;
 }
 
 /* Icons */
-.main-tweets footer ul li {
+.main-tweets footer ul li{
   padding: 0 0.25em;
 }
 
-.main-tweets footer ul li:hover {
+.main-tweets footer ul li:hover{
   color: orangered;
 }
