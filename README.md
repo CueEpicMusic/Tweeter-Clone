@@ -18,6 +18,10 @@ This repository is the starter code for the project: Students will fork and clon
 
 https://user-images.githubusercontent.com/92469359/180624418-9dec84cd-2af9-4ab2-9623-801043a4bd6c.mp4
 
+**Small screen view**
+
+https://user-images.githubusercontent.com/92469359/180624705-f7d5ab12-9e6a-4fa9-8f5a-16cb10dc5ba4.mp4
+
 ## Dependencies
 
 - Express
