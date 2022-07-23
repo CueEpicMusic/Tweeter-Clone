@@ -35,7 +35,6 @@
   background-color: #2460a7;
   cursor: pointer;
 }
-
 .navbar-menu .compose-button:hover {
   -webkit-animation: action 0.5s infinite alternate;
   animation: action 0.5s infinite alternate;

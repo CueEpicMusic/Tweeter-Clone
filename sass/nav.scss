@@ -38,11 +38,10 @@
   border: none;
   background-color: $primary;
   cursor: pointer;
-}
-
-.navbar-menu .compose-button:hover {
-  -webkit-animation: action 0.5s infinite  alternate;
-  animation: action 0.5s infinite  alternate;
+  &:hover {
+    -webkit-animation: action 0.5s infinite  alternate;
+    animation: action 0.5s infinite  alternate;
+  }
 }
 
 @-webkit-keyframes action {
