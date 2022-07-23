@@ -16,7 +16,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 Welcome to Tweeter! 
 
-https://user-images.githubusercontent.com/92469359/180623447-9ddf348b-402d-451b-b160-a2b410cd991d.mp4
+https://user-images.githubusercontent.com/92469359/180624418-9dec84cd-2af9-4ab2-9623-801043a4bd6c.mp4
 
 ## Dependencies
 
