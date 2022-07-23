@@ -57,8 +57,13 @@
     transform: translateY(10px);
   }
 }
-
 /* Button color */
 .navbar-menu li i {
   color: orangered;
+}
+
+@media only screen and (max-width: 520px) {
+  .navbar-menu {
+    font-size: 1em;
+  }
 }
