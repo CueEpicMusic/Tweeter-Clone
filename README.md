@@ -16,9 +16,11 @@ This repository is the starter code for the project: Students will fork and clon
 
 Welcome to Tweeter! 
 
-!["Tweeter in action!"](./docs/tweeter-homepage.mp4)
+https://user-images.githubusercontent.com/92469359/180623447-9ddf348b-402d-451b-b160-a2b410cd991d.mp4
 
 ## Dependencies
 
 - Express
 - Node 5.10.x or above
+
+
